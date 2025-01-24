@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; /* White background */
+    color: #12372A; /* Dark text color */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #12372A; /* Heading color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #436850; /* Subheading color */
+    font-size: 1.5rem;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Use flexbox for the two-column layout */
+    justify-content: space-between; /* Space between columns */
+    flex-wrap: wrap; /* Ensure it wraps on small screens */
+    gap: 20px; /* Add space between form and table */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    flex: 1;
+    min-width: 300px; /* Ensure form container doesn't get too narrow */
+    max-width: 600px;
+}
+
+.table-container {
+    flex: 1;
+    min-width: 300px; /* Ensure table container doesn't get too narrow */
+    max-width: 600px;
+    overflow-x: auto; /* Allow horizontal scrolling if the table overflows */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+}
+
+form {
+    padding: 20px;
+    background-color: #FFFFFF; /* White background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+    border: 1px solid #436850; /* Add subtle border */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #436850; /* Darker border color */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #FFFFFF; /* White background */
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #12372A; /* Focus border color */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(18, 55, 42, 0.4); /* Subtle focus shadow */
+}
+
+button {
+    background-color: #12372A; /* Button color */
+    color: white; /* Button text color */
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    margin-top: 10px; /* Add some space above the button */
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: #436850; /* Button hover color */
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between table cells */
+    margin-top: 20px;
+    background-color: white; /* White table background */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure borders don't overlap */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    table-layout: auto; /* Allows the table to grow or shrink based on its content */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #436850; /* Border color for table */
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #12372A; /* Header background color */
+    color: white; /* Header text color */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #F7F7F7; /* Add zebra-striping for better readability */
+}
+
+tr:hover {
+    background-color: #EFEFEF; /* Highlight row on hover */
+}
+
+a {
+    color: #12372A; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #436850; /* Slightly different hover color */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the form and table on smaller screens */
+    }
+
+    form {
+        margin-bottom: 20px; /* Add space below the form */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem; /* Adjust headings on smaller screens */
+    }
+
+    button {
+        font-size: 0.9rem; /* Make button text smaller for mobile */
+    }
+
+    input[type="text"] {
+        padding: 10px; /* Slightly reduce input padding */
+    }
+
+    table th, table td {
+        font-size: 0.8rem; /* Adjust table text size for smaller screens */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce padding in table cells for smaller screens */
+    }
+}

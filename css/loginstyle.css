@@ -1,0 +1,230 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f4f4f9 60%, #a8d5ba, #49A078); /* Subtle gradient */
+    position: relative;
+    overflow: hidden;
+    animation: fadeBackground 6s infinite alternate ease-in-out; /* Faster background fade animation */
+}
+
+  .box {
+    position: fixed;
+    top: 0;
+    transform: rotate(90deg); 
+    left: 0;
+  }
+  
+  .wave {
+    position: absolute;
+    opacity: .4;
+    width: 1500px;
+    height: 1300px;
+    margin-left: -150px;
+    margin-top: -250px;
+    border-radius: 43%;
+  }
+  
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    from {transform: rotate(360deg);}
+  }
+  
+  .wave.-one {
+    animation: rotate 10000ms infinite linear;
+    opacity: 5%;
+    background: #49A078;
+  }
+  
+  .wave.-two {
+    animation: rotate 6000ms infinite linear;
+    opacity: 10%;
+    background: #49A078;
+  }
+
+/* Main Wrapper */
+.wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Push sections apart */
+    gap: 2rem;
+    max-width: 1200px;
+    width: 90%;
+    padding: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* PDMS Information Section */
+.pdms-info {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically align the items */
+    gap: 1rem; /* Adjust space between image and text */
+    max-width: 600px; /* Reduced width to allow room for the form */
+    width: 100%; /* Ensure it takes up available space */
+    padding: 1rem; /* Add padding for spacing */
+}
+
+/* Image styling */
+.pdms-image img {
+    max-width: 150px; /* Adjust logo size */
+    height: auto;
+    display: block;
+}
+
+/* Horizontal Fade-In Animation for text */
+.pdms-text h1 {
+    font-size: 2.5rem; /* Larger font size for heading */
+    color: #12372A;
+    margin-bottom: 0.5rem;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start from the left (negative value) */
+    animation: fadeInLeft 2s forwards; /* Apply the horizontal fade-in animation */
+}
+
+.pdms-text p {
+    font-size: 1.25rem; /* Larger font size for paragraph */
+    color: #555;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start from the left */
+    animation: fadeInLeft 2s 1s forwards; /* Apply the animation after a delay */
+}
+
+/* Horizontal Fade-In effect */
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move to normal position */
+    }
+}
+
+
+/* Login Section */
+.login-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    text-align: center;
+    flex: 1;
+    width: 100%;
+    margin-left: 2rem; /* Move the form further to the right */
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #12372A;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #12372A;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-group button:hover {
+    background-color: #0f2c21;
+}
+
+/* General Wrapper Styling */
+.wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items at the start vertically */
+    justify-content: space-between; /* Spread items horizontally */
+    gap: 2rem; /* Add spacing between sections */
+    max-width: 1200px;
+    width: 90%;
+    padding: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    z-index: 2;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align sections */
+    }
+
+    .pdms-info {
+        order: 1; /* Ensure info appears first */
+        text-align: center;
+        max-width: 100%; /* Full width */
+    }
+
+    .login-container {
+        order: 2; /* Form appears below info */
+        max-width: 100%; /* Full width for small screens */
+        margin: 0; /* Remove any extra margins */
+        text-align: center;
+    }
+
+    .pdms-info img {
+        max-width: 60%; /* Resize image for smaller screens */
+        margin: 0 auto; /* Center image */
+    }
+
+    .pdms-text h1 {
+        font-size: 2rem; /* Adjust heading size for readability */
+    }
+
+    .pdms-text p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .pdms-info img {
+        max-width: 70%; /* Smaller images for extra small screens */
+    }
+
+    .pdms-text h1 {
+        font-size: 1.75rem; /* Reduce heading size */
+    }
+
+    .pdms-text p {
+        font-size: 0.875rem; /* Reduce paragraph size */
+    }
+
+    .login-container {
+        padding: 1rem; /* Adjust padding */
+    }
+}
+

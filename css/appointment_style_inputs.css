@@ -1,0 +1,313 @@
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Input and Textarea Styling */
+.maternity-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.maternity-input:focus {
+    border-color: #4CAF50;
+    background-color: #eafaf1;
+    outline: none;
+}
+
+.maternity-input[type="number"]::-webkit-outer-spin-button,
+.maternity-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.maternity-input[type="number"]:focus::-webkit-outer-spin-button,
+.maternity-input[type="number"]:focus::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Form Group (label + input) styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+    display: block;
+}
+
+/* Textarea Styling */
+.maternity-input[type="textarea"] {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Form Row Styling for multi-column layout */
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1 1 30%;
+}
+
+/* Buttons Styling */
+.btn-submit, .btn-cancel {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+}
+
+.btn-cancel:hover {
+    background-color: #e53935;
+}
+
+/* Prevent over-extending of inputs */
+.maternity-input {
+    max-width: 100%;
+}
+
+/* Make the form scrollable */
+.popup-form {
+    max-height: 80vh;  /* Limit height to 80% of the viewport height */
+    overflow-y: auto;  /* Enable vertical scrolling if content exceeds max-height */
+    padding-right: 10px;  /* Optional to account for scrollbar width */
+}
+
+/* Prevent excessive form height, especially for larger content */
+.popup-form-container {
+    max-height: 90vh;  /* Limit overall height of the form container */
+    overflow: hidden;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .maternity-input {
+        font-size: 18px; /* Larger text for small screens */
+    }
+}
+
+
+/* Styling for the radio button container */
+.radiobtn {
+    margin-bottom: 20px; /* Add space between groups of radio buttons */
+}
+
+/* Label styling specific to radio buttons inside .radiobtn */
+.radiobtn label.radio-label {
+    display: inline-flex;
+    align-items: center; /* Align radio button and label text */
+    font-size: 16px;
+    margin-right: 15px; /* Space between labels */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-bottom: 8px; /* Add margin below each label */
+}
+
+/* Styling for radio buttons */
+.radiobtn input[type="radio"] {
+    margin-right: 8px; /* Space between radio button and label text */
+    cursor: pointer; /* Pointer cursor for radio buttons */
+}
+
+/* Styling for the "Reason for Appointment" label */
+label[for="reason"] {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Hover effect for labels inside .radiobtn */
+.radiobtn label.radio-label:hover {
+    color: #4CAF50; /* Change label color on hover */
+}
+
+/* Add spacing between radio button options */
+.radiobtn label.radio-label {
+    display: block;
+    margin-bottom: 10px; /* Space between individual radio button labels */
+}
+
+/* Styling for the radio button container */
+.radiobtn div {
+    margin-bottom: 15px; /* Space between the radio button group and the next section */
+}
+
+/* Label for Select Doctor */
+label[for="doctor_id"] {
+    font-size: 18px; /* Slightly larger text for the label */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 10px; /* Add space below the label */
+    display: block; /* Make label block level */
+    color: #333; /* Darker color for label text */
+}
+
+/* Styling for the doctor select dropdown */
+#doctor_id.custom-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc; /* Match border color with other inputs */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Light background color */
+    margin-bottom: 12px; /* Margin below the input for spacing */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth border color transition on focus */
+}
+
+/* Focus effect for the doctor select dropdown */
+#doctor_id.custom-input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    background-color: #eafaf1; /* Light green background on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for the selected option */
+#doctor_id.custom-input option {
+    font-size: 16px; /* Match font size with the input field */
+}
+
+/* Styling for the first option (default) */
+#doctor_id.custom-input option:first-child {
+    color: #aaa; /* Lighter color for default option */
+}
+/* Label for Patient Search */
+label[for="patient_id"] {
+    font-size: 18px; /* Larger font size for label */
+    font-weight: bold; /* Make label bold */
+    margin-bottom: 10px; /* Space between label and input */
+    display: block; /* Make label block level */
+    color: #333; /* Dark color for the label text */
+}
+
+/* Container for the dropdown and search input */
+.dropdown-container {
+    position: relative; /* Required for positioning dropdown list */
+    width: 98%; /* Ensure full-width for the container */
+}
+
+/* Custom input for patient search */
+#patient_search.custom-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc; /* Match border color with other inputs */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Light background for input */
+    margin-bottom: 10px; /* Space below the input */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth border color transition on focus */
+}
+
+/* Focus effect for the patient search input */
+#patient_search.custom-input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    background-color: #eafaf1; /* Light green background on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Dropdown list styling */
+#patient_list.dropdown-list {
+    position: absolute;
+    width: 100%; /* Dropdown list should align with the input field */
+    max-height: 200px; /* Limit the height of the dropdown */
+    overflow-y: auto; /* Add scroll if there are many items */
+    border: 1px solid #ccc; /* Border for the dropdown */
+    border-radius: 6px;
+    background-color: #fff; /* White background for dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+    display: none; /* Hide the dropdown by default */
+}
+
+/* Style for each dropdown item */
+#patient_list.dropdown-list .dropdown-item {
+    padding: 12px;
+    font-size: 16px;
+    color: #333; /* Text color for dropdown items */
+    cursor: pointer; /* Cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
+
+/* Hover effect for dropdown items */
+#patient_list.dropdown-list .dropdown-item:hover {
+    background-color: #eafaf1; /* Light green background on hover */
+}
+
+/* Style when no patients are available */
+#patient_list.dropdown-list .dropdown-item.no-patients {
+    color: #aaa; /* Lighter text color for 'No patients' message */
+    cursor: default; /* No pointer cursor for the message */
+}
+
+/* Label for Date and Time */
+label[for="date_and_time"] {
+    font-size: 18px; /* Larger font size for the label */
+    font-weight: bold; /* Make label bold */
+    margin-bottom: 10px; /* Space between label and input */
+    display: block; /* Make label block level */
+    color: #333; /* Dark color for the label text */
+}
+
+/* Custom input for Date and Time */
+#date_and_time.custom-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc; /* Match border color with other inputs */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Light background for input */
+    margin-bottom: 20px; /* Space below the input */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth border color transition on focus */
+}
+
+/* Focus effect for the Date and Time input */
+#date_and_time.custom-input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    background-color: #eafaf1; /* Light green background on focus */
+    outline: none; /* Remove default outline */
+}

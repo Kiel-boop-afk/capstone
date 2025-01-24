@@ -1,0 +1,106 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb; /* Light background for consistency */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
+}
+
+/* Header */
+header {
+    background-color: #12372A; /* Dark Green Header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Profile Container */
+.profile-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-grow: 1; /* Ensures the profile container takes up available space */
+}
+
+/* Patient Details Section */
+.patient-details {
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for Patient Details */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Individual Item Styling */
+.detail-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight the label using clinic green */
+.detail-item strong {
+    color: #12372A; /* Use clinic brand color */
+}
+
+/* Footer */
+footer {
+    background-color: #12372A; /* Dark Green Footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Optional Button Styling */
+button {
+    background-color: #12372A; /* Use brand color for buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1d6b4c; /* Slightly lighter shade on hover */
+}
+
+/* Exit Button Styling */
+.exit-btn {
+    background-color: #e74c3c; /* Red color for the button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.exit-btn:hover {
+    background-color: #c0392b; /* Darker shade of red on hover */
+}

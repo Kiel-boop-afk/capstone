@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: #12372A;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard:hover {
+    transform: scale(1.01);
+}
+
+/* Logout Button */
+.logout-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.logout-button button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Dashboard Buttons */
+.dashboard-btn {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 15px 25px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-btn:hover {
+    background-color: #449d44;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #12372A;
+    color: white;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table thead th {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    color: #555;
+}
+
+/* Success Message Popup */
+.popup-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-message.show {
+    display: block;
+    animation: fadeOut 3s forwards ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 20px;
+    }
+
+    .dashboard-btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    .popup-message {
+        width: 95%;
+    }
+}
